@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+{% block content %}
+		<h3>Sales Forecasting</h3>
+	<div class="content-section">
+		<form method="POST" action="">
+			{{ form.hidden_tag() }}
+			<fieldset class="form-group">
+				<h3>Client Attributes</h3>
+				<hr>
+				<div class="form-group">
+					{{ form.age.label() }}
+					{{ form.age(placeholder="30") }}
+				</div>
+				<div class="form-group">
+					{{ form.job.label }}
+					{{ form.job() }}
+				</div>
+				<div class="form-group">
+					{{ form.marital.label }}
+					{{ form.marital() }}
+				</div>
+				<div class="form-group">
+					{{ form.education.label }}
+					{{ form.education() }}
+				</div>
+				<div class="form-group">
+					{{ form.housing.label }}
+					{{ form.housing() }}
+				</div>
+				<div class="form-group">
+					{{ form.loan.label }}
+					{{ form.loan() }}
+				</div>
+				<h3>Last Telephone Contact</h3>
+				<hr>
+				<div class="form-group">
+					{{ form.contact.label }}
+					{{ form.contact() }}
+				</div>
+				<div class="form-group">
+					{{ form.month.label }}
+					{{ form.month() }}
+				</div>
+				<div class="form-group">
+					{{ form.day_of_week.label }}
+					{{ form.day_of_week() }}
+				</div>
+				<div class="form-group">
+					{{ form.duration.label }}
+					{{ form.duration() }}
+				</div>
+				<h3>Other Attributes</h3>
+				<hr>
+				<div class="form-group">
+					{{ form.campaign.label }}
+					{{ form.campaign() }}
+				</div>
+				<div class="form-group">
+					{{ form.pdays.label }}
+					{{ form.pdays() }}
+				</div>
+				<div class="form-group">
+					{{ form.previous.label }}
+					{{ form.previous() }}
+				</div>
+				<div class="form-group">
+					{{ form.poutcome.label }}
+					{{ form.poutcome() }}
+				</div>
+				<h3>Social and Economic Context</h3>
+				<hr>
+				<div class="form-group">
+					{{ form.cons_price_idx.label }}
+					{{ form.cons_price_idx() }}
+				</div>
+				<div class="form-group">
+					{{ form.nr_employed.label }}
+					{{ form.nr_employed() }}
+				</div>
+				<hr>
+				<div class="form-group">
+					{{ form.submit() }}
+				</div>
+			</fieldset>
+		</form>
+	</div>
+{% endblock content %}

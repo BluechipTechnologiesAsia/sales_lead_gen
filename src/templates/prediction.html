@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+	<div>
+		{% if value %}
+			<p>{{value}}</p>
+		{% endif %}
+	</div>
+	<br>
+	<div>
+		<h5>Prediction Graph</h5>
+		{% if filename %}
+			<div align="center">
+				<img width="100px" height="50px" src="{{ url_for('showImage',filename=filename)}}">
+			</div>
+		{% endif %}
+	</div>
+{% endblock content %}
